@@ -1,0 +1,27 @@
+a {
+  font-weight: 500;
+  color: #636582;
+  text-decoration: inherit;
+}
+.link{
+    color:#494554;
+}
+
+
+.linkUnderline {
+    padding-bottom: 8px;
+    border-bottom-width: 0;
+    background-size: 0 3px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size .5s ease-in-out;
+}
+
+.linkUnderlineColor {
+    background-image: linear-gradient(transparent, transparent), linear-gradient(#043e5555, #DCCFC1)
+}
+
+.linkUnderline:hover,.active {
+    background-size: 100% 3px;
+    background-position: 0 100%
+}
