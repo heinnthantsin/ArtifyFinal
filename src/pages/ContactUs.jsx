@@ -11,9 +11,16 @@ function ContactUs() {
       <h1 className={`${style.responsiveTitle} text-center lg:mb-10 mb-8`}>
         About Us
       </h1>
-      <section className="flex flex-col sm:flex-col lg:flex-row sm:gap-5  md:align-center sm:min-h-[600px]:">
-        <div className=" lg:w-[50%] text-justify h-full ">
-          <p className={`${style.responsiveContent} text-justify`}>
+      <section className="flex flex-col sm:flex-col lg:flex-row sm:gap-5  md:align-center sm:min-h-[600px]">
+
+        <div className="lg:w-[50%] h-[50vh] sm:min-h-[50vh] rounded-2xl">
+          <img
+            className="w-full h-full object-cover rounded-lg"
+            src="src\assets\img\aboutus.jpg"
+          />
+        </div>
+        <div className=" lg:w-[50%] h-full">
+          <p className={`${style.responsiveContent} leading-20`}>
             Welcome to Artify, where creativity meets community. We believe in
             the transformative power of art and strive to support artists by
             showcasing their unique creations and connecting them with art
@@ -23,14 +30,8 @@ function ContactUs() {
             through art.
           </p>
         </div>
-        <div className="lg:w-[50%] h-[50vh] sm:min-h-[50vh] rounded-2xl">
-          <img
-            className="w-full h-full object-cover rounded-lg"
-            src="src\assets\img\aboutus.jpg"
-          />
-        </div>
       </section>
-      <section className="mt-20 w-full">
+      <section className="w-full">
         <div className="w-fit mx-auto">
           <FormCompo />
         </div>

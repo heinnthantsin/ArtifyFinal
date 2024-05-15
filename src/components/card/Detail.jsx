@@ -82,7 +82,10 @@ function Detail({
           )}
 
           {productRotue && (
-            <div className="">
+            <div className="md:block">
+              <Link className="md:ms-3" to="/checkout">
+                <Button customeClass="w-[60%]" buttonName={"Place Order"} />
+              </Link>
               <button
                 onClick={() =>
                   cartStore.addCartItem({
@@ -100,9 +103,7 @@ function Detail({
                   buttonName={"Add to Cart"}
                 />
               </button>
-              <Link className="ms-3" to="/checkout">
-                <Button customeClass="w-[60%]" buttonName={"Place Order"} />
-              </Link>
+
             </div>
           )}
           {aboutArtist && (

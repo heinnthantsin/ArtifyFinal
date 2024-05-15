@@ -33,23 +33,26 @@ export function Checkout() {
     });
   };
   return (
-    <div className="w-fit mx-auto">
-      <Card color="transparent" shadow={false}>
+    <div className="sm:w-fit mx-auto">
+      <Card color="transparent" shadow={false} className="w-[80vh]">
         <Typography title="Checkout" variant="h4" className={"text-titleColor"}>
           Checkout
         </Typography>
-        <form className="mt-4 w-80 max-w-screen-lg sm:w-50">
-          <Typography variant="h6" color="blue-gray" className="">
-            Name
-          </Typography>
-          <Input
-            type="Name"
-            label="Name"
-            placeholder="JohnDoe"
-            value={"John Doe"}
-          />
-          <div className="flex flex-col gap-6">
-            <div className="flex sm:flex-col">
+        <form className="mt-4">
+          <div className="mb-4">
+            <Typography variant="h6" color="blue-gray" className="mb-3">
+              Name
+            </Typography>
+            <Input
+              type="Name"
+              label="Name"
+              placeholder="JohnDoe"
+              value={"John Doe"}
+              className="max-w-[275px]"
+            />
+          </div>
+          <div className="">
+            <div className="flex flex-col md:flex-row gap-4">
               <div>
                 <Typography variant="h6" color="blue-gray" className="mb-2">
                   Email
@@ -73,7 +76,9 @@ export function Checkout() {
                 />
               </div>
             </div>
-            <Typography variant="h6" color="blue-gray" className="-mb-2">
+          </div>
+          <div className="mt-5">
+            <Typography variant="h6" color="blue-gray" className="mb-2">
               Address
             </Typography>
             <Input
@@ -82,8 +87,8 @@ export function Checkout() {
               placeholder="..."
               value={"Yangon"}
             />
-          </div>
 
+          </div>
           <div className="my-3">
             <Typography variant="h6" color="blue-gray" className="mb-2">
               Payment Method

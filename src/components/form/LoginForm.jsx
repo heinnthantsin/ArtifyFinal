@@ -21,7 +21,7 @@ export default function CheckoutForm({ handleLogin }) {
 
 
     return (
-        <Card className="fixed bottom-1/2 left-1/2 transform -translate-x-1/2 translate-y-1/2 px-10 py-4  bg-[#faf8ff] bg-opacity-10 " color="transparent">
+        <Card className="fixed bottom-1/2 left-1/2 transform -translate-x-1/2 translate-y-1/2 px-10 py-4  bg-[#faf8ff] bg-opacity-10" color="transparent">
             <button className="flex place-content-end" onClick={() => handleLogin()}>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={28} height={28} color={"#000000"} fill={"none"}>
                     <path d="M19.0005 4.99988L5.00045 18.9999M5.00045 4.99988L19.0005 18.9999" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />

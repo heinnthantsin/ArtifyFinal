@@ -72,49 +72,44 @@ const Navbar = () => {
       <div className="hidden lg:flex">
         <ul className="flex items-center gap-10">
           <li
-            className={`${
-              pathName === "/" && "border-b-4 pb-0.5 border-gray-700/60"
-            }`}
+            className={`${pathName === "/" && "border-b-4 pb-0.5 border-gray-700/60"
+              }`}
           >
             <NavLink className={`${navClass} font-bold`} to="/">
               Home
             </NavLink>
           </li>
           <li
-            className={`${
-              pathName.startsWith("/product") &&
+            className={`${pathName.startsWith("/product") &&
               "border-b-4 pb-0.5 border-gray-700/60"
-            }`}
+              }`}
           >
             <NavLink className={`${navClass} font-bold`} to="/product">
               Arts
             </NavLink>
           </li>
           <li
-            className={`${
-              pathName.startsWith("/artist") &&
+            className={`${pathName.startsWith("/artist") &&
               "border-b-4 pb-0.5 border-gray-700/60"
-            }`}
+              }`}
           >
             <NavLink className={`${navClass} font-bold`} to="/artist">
               Artists
             </NavLink>
           </li>
           <li
-            className={`${
-              pathName.startsWith("/event") &&
+            className={`${pathName.startsWith("/event") &&
               "border-b-4 pb-0.5 border-gray-700/60"
-            }`}
+              }`}
           >
             <NavLink className={`${navClass} font-bold`} to="/event">
               Event
             </NavLink>
           </li>
           <li
-            className={`${
-              pathName.startsWith("/contactus") &&
+            className={`${pathName.startsWith("/contactus") &&
               "border-b-4 pb-0.5 border-gray-700/60"
-            }`}
+              }`}
           >
             <NavLink className={`${navClass} font-bold`} to="/contactus">
               Contact Us
@@ -128,7 +123,7 @@ const Navbar = () => {
       {/* overlay */}
       {isOpen && (
         <div
-          className="fixed h-screen w-screen lg:hidden bg-black/40 backdrop-blur-sm top-0 right-0"
+          className="fixed h-screen w-screen lg:hidden bg-black/40 backdrop-blur-sm top-0 right-0 z-20"
           onClick={() => setIsOpen(!isOpen)}
         ></div>
       )}
