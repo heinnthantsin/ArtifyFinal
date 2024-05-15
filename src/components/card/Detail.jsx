@@ -48,7 +48,7 @@ function Detail({
             src={img}
             alt="details"
             className="min-h-[300px] max-w-[230px] mx-auto
-                    md:min-w-[400px] md:min-h-[400px]  object-cover rounded-xl"
+                    md:min-w-[400px] md:min-h-[400px] object-cover rounded-xl"
           />
         </div>
         <div className="mt-4 text-textColor text-center lg:text-left w-full">
@@ -72,18 +72,18 @@ function Detail({
               <b>Rating :</b> {<Star rating={rating} />}
             </div>
           )}
-          <div className="flex justify-center md:justify-start gap-7 mb-3">
+          <div className="flex justify-center lg:justify-start gap-7 mb-3">
             {price && <div className="text-4xl font-semibold">${price}</div>}
           </div>
           {productRotue && (
-            <div className="w-fit inline-flex justify-center md: justify-start">
+            <div className="w-fit inline-flex lg:justify-start justify-center">
               <CustomRatingIcon />
             </div>
           )}
 
           {productRotue && (
             <div className="md:block">
-              <Link className="md:ms-3" to="/checkout">
+              <Link className="me-3" to="/checkout">
                 <Button customeClass="w-[60%]" buttonName={"Place Order"} />
               </Link>
               <button

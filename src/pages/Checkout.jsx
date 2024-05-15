@@ -33,9 +33,9 @@ export function Checkout() {
     });
   };
   return (
-    <div className="sm:w-fit mx-auto">
-      <Card color="transparent" shadow={false} className="w-[80vh]">
-        <Typography title="Checkout" variant="h4" className={"text-titleColor"}>
+    <div className="w-full max-w-xl mx-auto p-4">
+      <Card color="transparent" shadow={false} className="w-full">
+        <Typography title="Checkout" variant="h4" className="text-titleColor text-center mb-6">
           Checkout
         </Typography>
         <form className="mt-4">
@@ -44,59 +44,61 @@ export function Checkout() {
               Name
             </Typography>
             <Input
-              type="Name"
+              type="text"
               label="Name"
-              placeholder="JohnDoe"
-              value={"John Doe"}
-              className="max-w-[275px]"
+              placeholder="John Doe"
+              value="John Doe"
+              className="w-full"
             />
           </div>
-          <div className="">
+          <div className="mb-4">
             <div className="flex flex-col md:flex-row gap-4">
-              <div>
+              <div className="flex-1">
                 <Typography variant="h6" color="blue-gray" className="mb-2">
                   Email
                 </Typography>
                 <Input
-                  type="Email"
+                  type="email"
                   label="Email"
                   placeholder="JohnDoe@gmail.com"
-                  value={"johndoe333@gmail.com"}
+                  value="johndoe333@gmail.com"
+                  className="w-full"
                 />
               </div>
-              <div>
+              <div className="flex-1">
                 <Typography variant="h6" color="blue-gray" className="mb-2">
                   Phone Number
                 </Typography>
                 <Input
-                  type="Phone Number"
+                  type="tel"
                   label="Phone Number"
                   placeholder="09398383223"
-                  value={"09888777666"}
+                  value="09888777666"
+                  className="w-full"
                 />
               </div>
             </div>
           </div>
-          <div className="mt-5">
+          <div className="mb-4">
             <Typography variant="h6" color="blue-gray" className="mb-2">
               Address
             </Typography>
             <Input
-              type="Email"
+              type="text"
               label="Address"
               placeholder="..."
-              value={"Yangon"}
+              value="Yangon"
+              className="w-full"
             />
-
           </div>
-          <div className="my-3">
+          <div className="mb-4">
             <Typography variant="h6" color="blue-gray" className="mb-2">
               Payment Method
             </Typography>
             <Select
               value="KBZ Banking"
               placeholder="Select Payment Method"
-              className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
+              className="w-full !border-t-blue-gray-200 focus:!border-t-gray-900"
               labelProps={{
                 className: "before:content-none after:content-none",
               }}
@@ -109,30 +111,33 @@ export function Checkout() {
               ))}
             </Select>
           </div>
-          <Checkbox
-            checked
-            label={
-              <Typography
-                variant="small"
-                color="gray"
-                className="flex items-center font-normal"
-              >
-                I agree the
-                <a
-                  href="#"
-                  className="font-medium transition-colors hover:text-gray-900"
+          <div className="mb-4">
+            <Checkbox
+              checked
+              label={
+                <Typography
+                  variant="small"
+                  color="gray"
+                  className="flex items-center font-normal"
                 >
-                  &nbsp;Terms and Conditions
-                </a>
-              </Typography>
-            }
-            containerProps={{ className: "-ml-2.5" }}
-          />
-          <Button className="mt-6" fullWidth onClick={showModal}>
+                  I agree to the
+                  <a
+                    href="#"
+                    className="font-medium transition-colors hover:text-gray-900 ml-1"
+                  >
+                    Terms and Conditions
+                  </a>
+                </Typography>
+              }
+              containerProps={{ className: "-ml-2.5" }}
+            />
+          </div>
+          <Button className="mt-6 w-full" onClick={showModal}>
             Confirm
           </Button>
         </form>
       </Card>
     </div>
+
   );
 }

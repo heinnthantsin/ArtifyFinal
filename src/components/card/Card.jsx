@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
 import Star from "./Star";
-import style from "../../assets/style/responsive"; // Assuming this is a CSS module
+
 
 function Card({ img, name, artist, category, price, rating }) {
   const location = useLocation();
@@ -65,12 +65,12 @@ function Card({ img, name, artist, category, price, rating }) {
                 <Star rating={rating} />
               </span>
               {name && (
-                <p className="text-md text-[#204045] montserrat font-semibold pb-1">
+                <p className="text-start text-[#204045] montserrat font-semibold pb-1">
                   {name}
                 </p>
               )}
               {price && (
-                <p className="text-md text-[#204045] montserrat font-semibold space-x-2">
+                <p className="text-start text-[#204045] montserrat font-semibold space-x-2">
                   ${price}
                 </p>
               )}

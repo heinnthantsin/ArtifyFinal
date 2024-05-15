@@ -8,15 +8,11 @@ function FollowingList({ itemList, sectionTitle }) {
 
     const goDetail = (id) => {
         let basePath = '/product';
-        console.log(itemList)
         if (!itemList[0].price) {
             basePath = '/artist';
         }
 
         const newPath = `${basePath}/${id}`;
-
-        console.log("Href", window.location.href);
-        console.log("New Path", newPath);
         navigate(newPath)
         window.scrollTo(0, 0)
     }

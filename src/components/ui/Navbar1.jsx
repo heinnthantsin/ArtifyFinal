@@ -132,8 +132,8 @@ const Navbar = () => {
       <section
         className={
           isOpen
-            ? "text-black bg-white flex-col absolute left-0 top-0 h-screen p-8 gap-8z-50 w-[300px] duration-400"
-            : " text-black bg-white flex-col absolute left-[-100%] top-0 h-screen p-8 gap-8z-50 w-[-300px] duration-700"
+            ? "text-black bg-white flex-col absolute left-0 top-0 h-screen p-8 gap-8 z-50 w-[300px] duration-400"
+            : " text-black bg-white flex-col absolute left-[-100%] top-0 h-screen p-8 gap-8 z-50 w-[-300px] duration-700"
         }
       >
         <button

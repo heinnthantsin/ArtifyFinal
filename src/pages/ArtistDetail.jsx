@@ -9,8 +9,9 @@ import Detail from "../components/card/Detail";
 
 function ProductDetail() {
   const params = useParams();
-  const artistId = params.id;
+  const artistId = Number(params.id);
   const artist = ArtistData.find((artist) => artist.id == artistId);
+  console.log(artist);
   return (
     <>
       <Detail
@@ -22,7 +23,7 @@ function ProductDetail() {
       />
 
       <FollowingList
-        itemList={productData.filter((item) => item.artist === artist.artist)}
+        itemList={productData.filter((item) => item.category === artist?.category)}
         sectionTitle={"Artist's Works"}
       />
     </>
